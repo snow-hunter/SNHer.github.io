@@ -1,63 +1,154 @@
-[Hux Blog](https://huangxuan.me)
-================================
+<div align="right">
+  Language:
+  🇺🇸
+  <a title="Chinese" href="docs/zh-CN/README.md">🇨🇳</a>
+  <a title="Russian" href="docs/ru/README.md">🇷🇺</a>
+</div>
 
-> I never expected this becomes popular.
+# <div align="center"><a title="NexT website repository" href="https://github.com/theme-next/theme-next.org"><img align="center" width="56" height="56" src="https://raw.githubusercontent.com/theme-next/hexo-theme-next/master/source/images/logo.svg?sanitize=true"></a> e x T</div>
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
+<p align="center">
+  «NexT» is a high quality elegant <a href="https://hexo.io">Hexo</a> theme. It is crafted from scratch with love.
+<br>
+<br>
+  <a href="https://www.npmjs.com/package/hexo-theme-next"><img src="https://img.shields.io/github/package-json/v/theme-next/hexo-theme-next?style=flat-square"></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E=10.9.0-green?style=flat-square"></a>
+  <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
+  <a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20AGPL-orange?style=flat-square&logo=gnu"></a>
+<br>
+  <a href="https://bestpractices.coreinfrastructure.org/projects/2625"><img src="https://img.shields.io/cii/level/2625?style=flat-square" title="Core Infrastructure Initiative Best Practices"></a>
+  <a href="https://travis-ci.org/theme-next/hexo-theme-next?branch=master"><img src="https://img.shields.io/travis/theme-next/hexo-theme-next/master?style=flat-square&logo=travis%20ci" title="Travis CI [Linux]"></a>
+  <a href="https://app.codacy.com/manual/theme-next/hexo-theme-next/dashboard"><img src="https://img.shields.io/codacy/grade/72f7fe7609c2438a92069f448e5a341a/master?style=flat-square&logo=codacy" title="Project Grade"></a>
+  <img src="https://img.shields.io/snyk/vulnerabilities/github/theme-next/hexo-theme-next?style=flat-square" title="Vulnerabilities">
+<br>
+  <img src="https://user-images.githubusercontent.com/16272760/63487983-da41b080-c4df-11e9-951c-64883a8a5e9b.png">
+</p>
 
+## Live Preview
 
-[User Manual 👉](_doc/Manual.md)
---------------------------------------------------
+<p align="center">
+  💟 <a href="https://muse.theme-next.org">Muse</a> | 🔯 <a href="https://mist.theme-next.org">Mist</a> | ♓️ <a href="https://pisces.theme-next.org">Pisces</a> | ♊️ <a href="https://theme-next.org">Gemini</a>
+<br>
+<br>
+  More «NexT» examples <a href="https://github.com/theme-next/awesome-next#live-preview">here</a>.
+</p>
 
-### Getting Started
+## Installation
 
-1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
-
-2. Installed dependencies in the `Gemfile`:
+The simplest way to install is to clone the entire repository:
 
 ```sh
-$ bundle install 
+$ cd hexo
+$ git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```
 
-3. Serve the website (`localhost:4000` by default):
+Or you can see [detailed installation instructions][docs-installation-url] if you want any other variant.
+
+## Plugins
+
+NexT supports a large number of third-party plugins, which can be easily configured.
+
+For example, if you want to enable `pjax` on your site, just set `pjax` to `true` in NexT config file:
+
+```yml
+# Easily enable fast Ajax navigation on your website.
+# Dependencies: https://github.com/theme-next/theme-next-pjax
+pjax: true
+```
+
+Then visit the «Dependencies» link to get the installation instructions of this module.
+
+### Configure CDN
+
+If you want to specify a CDN link for any plugins, you need to set / update the CDN link.
+
+For example, if you want to use `mediumzoom` and load the plugin via CDN, go to NexT config and see:
+
+```yml
+vendors:
+  # ...
+  # Some contents...
+  # ...
+  mediumzoom: # Set or update mediumzoom CDN URL.
+```
+
+## Update
+
+NexT releases new versions every month. You can update to latest master branch by the following command:
 
 ```sh
-$ bundle exec jekyll serve  # alternatively, npm start
+$ cd themes/next
+$ git pull
 ```
 
-### Development (Build From Source)
+And if you see any error message during update (something like **«Commit your changes or stash them before you can merge»**), recommended to learn [Hexo data files][docs-data-files-url] feature.\
+However, you can bypass update errors by using the `Commit`, `Stash` or `Reset` commands for local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
 
-To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
+**If you want to update from v5.1.x to the latest version, read [this][docs-update-5-1-x-url].**
 
-Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
+## Feedback
 
-Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
+* Visit the [Awesome NexT][awesome-next-url] list to share plugins and tutorials with other users.
+* Join our [Telegram][t-chat-url] / [Gitter][gitter-url] / [Riot][riot-url] chats.
+* [Add or improve translation][i18n-url] in few seconds.
+* Report a bug in [GitHub Issues][issues-bug-url].
+* Request a new feature on [GitHub][issues-feat-url].
+* Vote for [popular feature requests][feat-req-vote-url].
 
-This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
+## Contributing
 
+We welcome you to join the development of NexT. Please see [contributing document][contributing-document-url]. 🤗
 
-### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
+Also, we welcome Issue or PR to our [official-plugins][official-plugins-url].
 
+## Contributors
 
-Other Resources
----------------
+[![][contributors-image]][contributors-url]
 
-Ports
-- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
+## Thanks
 
-[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
-- Out of date. Helps wanted for updating it on par with the main repo
+<p align="center">
+  «NexT» send special thanks to these great services that sponsor our core infrastructure:
+<br>
+<br>
+  <a href="https://github.com"><img align="center" width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png"></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.netlify.com"><img align="center" width="150" src="https://cdn.netlify.com/15ecf59b59c9d04b88097c6b5d2c7e8a7d1302d0/1b6d6/img/press/logos/full-logo-light.svg"></a>
+<br>
+<br>
+  <sub>GitHub allows us to host the Git repository, Netlify allows us to distribute the documentation.</sub>
+<br>
+<br>
+  <a href="https://crowdin.com"><img align="center" width="180" src="https://support.crowdin.com/assets/logos/crowdin-logo1-small.png"></a>
+<br>
+<br>
+  <sub>Crowdin allows us to translate conveniently the documentation.</sub>
+<br>
+<br>
+  <a href="https://codacy.com"><img align="center" width="155" src="https://user-images.githubusercontent.com/16944225/55026017-623f8f00-5002-11e9-88bf-0d6a5884c6c2.png"></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://travis-ci.com"><img align="center" width="140" src="https://raw.githubusercontent.com/travis-ci/travis-web/master/public/images/logos/TravisCI-Full-Color.png"></a>
+<br>
+<br>
+  <sub>Codacy allows us to monitor code quality, Travis CI allows us to run the test suite.</sub>
+</p>
 
-Translation
-- [🇨🇳 (somewhat outdated)](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
+[docs-installation-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md
+[docs-data-files-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/DATA-FILES.md
+[docs-update-5-1-x-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md
 
+[t-news-url]: https://t.me/theme_next_news
+[t-chat-url]: https://t.me/theme_next
+[gitter-url]: https://gitter.im/theme-next
+[riot-url]: https://riot.im/app/#/room/#theme-next:matrix.org
+[i18n-url]: https://i18n.theme-next.org
 
-License
--------
+[awesome-next-url]: https://github.com/theme-next/awesome-next
+[issues-bug-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Bug&template=bug-report.md
+[issues-feat-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Feature+Request&template=feature-request.md
+[feat-req-vote-url]: https://github.com/theme-next/hexo-theme-next/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22
 
-Apache License 2.0.
-Copyright (c) 2015-present Huxpro
-
-Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
-Copyright (c) 2013-2016 Blackrock Digital LLC.
+[contributing-document-url]: https://github.com/theme-next/hexo-theme-next/blob/master/.github/CONTRIBUTING.md
+[official-plugins-url]: https://github.com/theme-next
+[contributors-image]: https://opencollective.com/theme-next/contributors.svg?width=890
+[contributors-url]: https://github.com/theme-next/hexo-theme-next/graphs/contributors
